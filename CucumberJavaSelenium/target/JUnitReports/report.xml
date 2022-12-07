@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="19.429">
+    <testcase classname="feature to test google test fucntionality" name="Validate Google search is working" time="13.52">
+        <system-out><![CDATA[Given browser is open.......................................................passed
+And user is on google search................................................passed
+When user enters  text in search box........................................passed
+And hist enter..............................................................passed
+Then user is navigated to results...........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="feature to test facebook signup" name="Check browser is open" time="5.769">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given user is on signup page................................................passed
+When user enters valid details..............................................passed
+And clicks on signup button.................................................passed
+Then user is nevigated to the home page.....................................undefined
+]]></failure>
+    </testcase>
+</testsuite>

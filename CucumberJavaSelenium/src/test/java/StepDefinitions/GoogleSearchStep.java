@@ -39,35 +39,40 @@ public class GoogleSearchStep {
 	}
 
 	@And("user is on google search")
-	public void user_is_on_google_search() {
+	public void user_is_on_google_search() throws InterruptedException {
 		System.out.println("User is on google search");
 		
 		driver.navigate().to("https://www.google.com/");
 	
 		
-		
+		Thread.sleep(2000);
 	}
 
 	@When("user enters  text in search box")
-	public void user_enters_text_in_search_box() {
+	public void user_enters_text_in_search_box() throws InterruptedException {
 		System.out.println("User enters text in search box");
 		
 		driver.findElement(By.name("q")).sendKeys("Mahendra Etampawala");
 		
+		Thread.sleep(2000);
+		
 	}
 
 	@And("hist enter")
-	public void hist_enter() {
+	public void hist_enter() throws InterruptedException {
 		System.out.println("User hits the enter");
 		
 		
 		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+		
+		Thread.sleep(2000);
 	}
 
 	@Then("user is navigated to results")
-	public void user_is_navigated_to_results() {
+	public void user_is_navigated_to_results() throws InterruptedException {
 		System.out.println("User navigated to results");
 		
+		Thread.sleep(2000);
 		driver.getPageSource().contains("Mahendra Etampawala");
 		driver.close();
 		driver.quit();
